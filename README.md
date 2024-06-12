@@ -1,6 +1,6 @@
 # scAGDE
 
-[![PyPI badge](https://badge.fury.io/py/scAGDE.svg)](https://pypi.org/project/scAGDE/)
+[![PyPI badge](https://badge.fury.io/py/scAGDE.png)](https://pypi.org/project/scAGDE/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11609252.svg)](https://doi.org/10.5281/zenodo.11609252)
 ![logo](https://github.com/Hgy1014/scAGDE/assets/64194550/867c48cc-c777-4a08-9886-eb6fdb214cc5)
