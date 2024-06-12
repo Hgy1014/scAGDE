@@ -75,7 +75,7 @@ pip install scAGDE
 ```
 
 # Usage
-We give users some suggestions for running scAGDE in the <a href="https://github.com/Hao1014/scAGDE/blob/master/demo.ipynb">demo.ipynb</a>.
+We give users some suggestions for running scAGDE in the <a href="demo.ipynb">demo.ipynb</a>.
 
 
 # Data Availability
