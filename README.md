@@ -1,6 +1,6 @@
 # scAGDE
 
-[![PyPI badge](https://badge.fury.io/py/scAGDE.svg)](https://pypi.org/project/scMGCA/)
+[![PyPI badge](https://badge.fury.io/py/scAGDE.svg)](https://pypi.org/project/scAGDE/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11609252.svg)](https://doi.org/10.5281/zenodo.11609252)
 ![logo](https://github.com/Hgy1014/scAGDE/assets/64194550/867c48cc-c777-4a08-9886-eb6fdb214cc5)
@@ -39,7 +39,7 @@ downstream applications of clustering, visualization, imputation, enrichment ana
 
 # System Requirements
 ## Hardware requirements
-`scMGCA` package requires only a standard computer with enough RAM to support the in-memory operations.
+`scAGDE` package requires only a standard computer with enough RAM to support the in-memory operations.
 
 ## Software requirements
 ### OS Requirements
@@ -47,42 +47,40 @@ This package is supported for *Linux*. The package has been tested on the follow
 + Linux: Ubuntu 18.04
 
 ### Python Dependencies
-`scMGCA` mainly depends on the Python scientific stack.
+`scAGDE` mainly depends on the Python scientific stack.
 ```
 numpy
 scipy
-tensorflow
+torch
 scikit-learn
 pandas
 scanpy
 anndata
 ```
-For specific setting, please see <a href="https://github.com/Philyzh8/scMGCA/blob/master/requirements.txt">requirement</a>.
-
+For specific setting, please see <a href="requirements.txt">requirements.text</a>.
+### R Dependencies
+We need your environment to have R and `mclust` package installed.
 # Installation Guide:
-
-### Install from PyPi
-
+You can create an environment to run scAGDE without any problems by following the code below:
 ```
-$ conda create -n scMGCA_env python=3.6.8
-$ conda activate scMGCA_env
-$ pip install -r requirements.txt
-$ pip install scMGCA
+conda create -n scagde python=3.9.13
+conda activate scagde
+pip install torch==2.0.1
+pip install numpy==1.23.5
+pip install rpy2==3.5.13
+pip install scanpy==1.9.3
+pip install matplotlib==3.5.0
+conda install r-mclust
+pip install scAGDE
 ```
 
 # Usage
-`scMGCA` is a deep graph embedding learning method for single-cell clustering, which can be used to:
-+ Single-cell data clustering. The example can be seen in the <a href="https://github.com/Philyzh8/scMGCA/blob/master/tutorial/demo.py">demo.py</a>.
-+ Correct the batch effect of data from different scRNA-seq protocols. The example can be seen in the <a href="https://github.com/Philyzh8/scMGCA/blob/master/tutorial/demo_batch.py">demo_batch.py</a>.
-+ Analysis of the mouse brain data with 1.3 million cells. The example can be seen in the <a href="https://github.com/Philyzh8/scMGCA/blob/master/tutorial/demo_scale.py">demo_scale.py</a>.
-+ Provide an automatic hyperparameter search algorithm. The example can be seen in the <a href="https://github.com/Philyzh8/scMGCA/blob/master/tutorial/demo_para.py">demo_para.py</a>.
-
-We give users some suggestions for running in the <a href="https://github.com/Philyzh8/scMGCA/blob/master/tutorial/tutorial.md">tutorial.md</a>.
+We give users some suggestions for running scAGDE in the <a href="https://github.com/Hao1014/scAGDE/blob/master/demo.ipynb">demo.ipynb</a>.
 
 
 # Data Availability
 
-The real data sets we used can be download in <a href="https://doi.org/10.5281/zenodo.7475687">data</a>.
+The simulated and realistic datasets we used in our study can be download in <a href="https://doi.org/10.5281/zenodo.11609252">data</a>.
 
 # License
 
@@ -91,15 +89,6 @@ This project is covered under the **MIT License**.
 # Citation
 
 ```
-@article{yu2023topological,
-  title={Topological identification and interpretation for single-cell gene regulation elucidation across multiple platforms using scMGCA},
-  author={Yu, Zhuohan and Su, Yanchi and Lu, Yifu and Yang, Yuning and Wang, Fuzhou and Zhang, Shixiong and Chang, Yi and Wong, Ka-Chun and Li, Xiangtao},
-  journal={Nature Communications},
-  volume={14},
-  number={1},
-  pages={400},
-  year={2023},
-  publisher={Nature Publishing Group UK London}
-}
+
 ```
 
