@@ -6,6 +6,7 @@
 
 `scAGDE` is a Python implementation for a novel single-cell chromatin accessibility model-based deep graph representation learning method that simultaneously learns feature representation and
 clustering through explicit modeling of single-cell ATAC-seq data generation.
+- [Briefly](#Briefly)
 - [Overview](#overview)
 - [System Requirements](#system-requirements)
 - [Installation Guide](#installation-guide)
@@ -13,8 +14,7 @@ clustering through explicit modeling of single-cell ATAC-seq data generation.
 - [Data Availability](#data-availability)
 - [License](#license)
 
-
-# Overview
+# Briefly
 Single-cell ATAC-seq technology has significantly advanced our understanding of cellular heterogeneity by enabling the exploration
 of epigenetic landscapes and regulatory elements at the single-cell level. A major challenge in analyzing high-throughput single-cell
 ATAC-seq data is its inherently low copy number, leading to data sparsity and high dimensionality, significantly limiting the elucidation and characterization of gene regulatory elements. To address these limitations, we developed scAGDE, a novel single-cell chromatin accessibility model-based deep graph representation learning method that simultaneously learns feature representation and
@@ -24,8 +24,17 @@ graph to elucidate the topological connections among individual cells. After tha
 (GCN) as an encoder to extract essential structural information from both the ATAC-seq count matrix and the cell graph, coupled
 with a Bernoulli-based decoder to characterize the global probabilistic structure of the data. Additionally, the graph embedding
 process independently generates soft labels that guide self-supervised deep clustering, which is characterized by its iterative refinement of results.
-
-![1664254559(1)](https://user-images.githubusercontent.com/65069252/192435582-5f012751-76ea-42a0-9ad2-a6e56f544528.jpg)
+# Overview
+Overview of the scAGDE framework. (a) A summary graphical illustration of scAGDE workflow. scAGDE takes as input the binary cell-by-peak matrix first into
+a chromatin accessibility-based autoencoder and then performs the graph embedding learning. (b) The chromatin accessibility-based autoencoder maps data into latent
+space, where each individual cell connects its nearest cell as neighbours to construct a cell graph. The variation of encoder’s weights can be translated to importance score
+of peaks for peak selection procedure. (c) The well-prepared cell graph and filtered data are simultaneously handled by a two-layer GCN encoder (i) and mapped into the
+latent space (ii). On the one hand, the latent embedding serves as input to dual decoders (iii), which include a graph decoder module to reconstruct from embedding, and a
+Bernoulli-based decoder module to estimate the probability of a peak being accessible, which are estimates of the true chromatin landscape in each cell. On the other hand,
+the dual clustering optimizations are introduced (iv), where a network of cluster layer, which is initialized by K-means results on the embedding, infers soft clustering label.
+The target distribution and one-hot pseudo label are sequentially calculated and used for label prediction loss and distribution alignment loss. (d) scAGDE facilitates critical
+downstream applications of clustering, visualization, imputation, enrichment analysis and discovery of regulators.
+![](../../images/scAGDE/framework.png)
 
 # System Requirements
 ## Hardware requirements
