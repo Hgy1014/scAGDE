@@ -45,6 +45,13 @@ class Trainer:
         torch.manual_seed(seed)
         fix_seed(seed)
         self.peakImportance = None
+        # TODO training configuration
+        self.lr1 = 0.0002
+        self.lr2 = 0.0002
+        self.max_iter1 = 5000
+        self.max_iter2 = 4000
+        self.pretrain_iter = 1500
+        self.weight_decay = 5e-4
 
     def fit(self, X, topn=10000, impute=True):
         A = self.CountModel(X)
@@ -61,7 +68,7 @@ class Trainer:
         print('\n## Training GraphModel ##')
         model.fit(
             adj_n=A, X=X,
-            lr=0.0002, weight_decay=5e-4, max_iter=4, pre_iter=1, outdir=outdir, verbose=self.verbose,
+            lr=self.lr2, weight_decay=self.weight_decay, max_iter=self.max_iter2, pre_iter=self.pretrain_iter, outdir=outdir, verbose=self.verbose,
             update_interval=100
         )
         torch.cuda.empty_cache()
@@ -88,7 +95,7 @@ class Trainer:
         model = ChromatinAccessibilityAutoEncoder(dims, n_centroids=self.n_centroids, device=self.device)
         model.to(self.device)
         print('\n## Training CountModel ##')
-        model.fit(X=X, lr=0.0002, weight_decay=5e-4, max_iter=5, verbose=self.verbose, outdir=self.outdir)
+        model.fit(X=X, lr=self.lr1, weight_decay=self.weight_decay, max_iter=self.max_iter1, verbose=self.verbose, outdir=self.outdir)
         weight_tensor = model.encoder.hidden[0].weight.detach().cpu().data
         var_tensor = torch.std(weight_tensor, 0).numpy()
         self.peakImportance = (var_tensor - min(var_tensor)) / (max(var_tensor) - min(var_tensor))

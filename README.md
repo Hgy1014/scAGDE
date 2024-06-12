@@ -75,12 +75,12 @@ pip install scAGDE
 ```
 
 # Usage
-We give users some suggestions for running scAGDE in the <a href="demo.ipynb">demo.ipynb</a>.
+We give users some suggestions for running scAGDE in <a href="tutorial.ipynb">tutorial.ipynb</a> or <a href="tutorial.py">tutorial.py</a>.
 
 
 # Data Availability
 
-The simulated and realistic datasets we used in our study can be download in <a href="https://doi.org/10.5281/zenodo.11609252">data</a>.
+All the simulated and realistic datasets we used in our study can be download in <a href="https://doi.org/10.5281/zenodo.11609252">data</a>.
 
 # License
 

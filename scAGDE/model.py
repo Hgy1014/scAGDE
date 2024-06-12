@@ -157,8 +157,8 @@ class ChromatinAccessibilityAutoEncoder(BaseModel):
 
 
     def fit(self, X, lr=0.0002, weight_decay=5e-4, max_iter=5000, verbose=True, outdir="./"):
-        iters = 1
-        with tqdm(range(max_iter), total=max_iter, desc='Epochs') as tq:
+        iters = 1500
+        with tqdm(range(max_iter), total=max_iter, desc='CountModel') as tq:
             optimizer = torch.optim.Adam(self.parameters(), lr=lr, weight_decay=weight_decay)
             x = torch.from_numpy(X).float().to(self.device)
             for epoch in range(iters):
@@ -282,7 +282,7 @@ class GraphEmbeddingModel(BaseModel):
         pre_optimizer = torch.optim.Adam(self.parameters(), lr=lr, weight_decay=weight_decay)  # 预训练
         if pre_iter > 0:
             self.train()
-            with tqdm(range(pre_iter), total=pre_iter, desc='Epochs') as tq:
+            with tqdm(range(pre_iter), total=pre_iter, desc='GraphModel-preTrain') as tq:
                 x = torch.from_numpy(X).float().to(self.device)
                 for epoch in tq:
                     pre_optimizer.zero_grad()
@@ -301,7 +301,7 @@ class GraphEmbeddingModel(BaseModel):
 
         # TODO 正式训练
         self.train()
-        with tqdm(range(max_iter), total=max_iter, desc='Epochs') as tq:
+        with tqdm(range(max_iter), total=max_iter, desc='GraphModel') as tq:
             x = torch.from_numpy(X).float().to(self.device)
             for epoch in tq:
                 optimizer.zero_grad()
