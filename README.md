@@ -2,7 +2,7 @@
 
 [![PyPI badge](https://badge.fury.io/py/scAGDE.png)](https://pypi.org/project/scAGDE/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11609252.svg)](https://doi.org/10.5281/zenodo.11609252)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11910314.svg)](https://zenodo.org/records/11910314)
 ![logo](https://github.com/Hgy1014/scAGDE/assets/64194550/867c48cc-c777-4a08-9886-eb6fdb214cc5)
 
 `scAGDE` is a Python implementation for a novel single-cell chromatin accessibility model-based deep graph representation learning method that simultaneously learns feature representation and
@@ -80,7 +80,7 @@ We give users some suggestions for running scAGDE in <a href="tutorial.ipynb">tu
 
 # Data Availability
 
-All the simulated and realistic datasets we used in our study can be download in <a href="https://doi.org/10.5281/zenodo.11609252">data</a>.
+All the simulated and realistic datasets we used in our study can be download <a href="https://zenodo.org/records/11910314">here</a>.
 
 # License
 
