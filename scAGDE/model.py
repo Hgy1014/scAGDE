@@ -204,7 +204,7 @@ class GCNEncoder(nn.Module):
 
 
 class GraphEmbeddingModel(BaseModel):
-    def __init__(self,  dims,  n_centroids, bn=False, dropout=0, binary=True, device=torch.device("cuda"),wADJ=1,wX=1,wKL=1,wDEC=1,sigma=0):
+    def __init__(self,  dims,  n_centroids, bn=False, dropout=0, binary=True, device=torch.device("cuda"),wADJ=10,wX=5,wKL=1,wDEC=1,sigma=0):
         super(GraphEmbeddingModel, self).__init__()
         [x_dim, z_dim, encode_dim, decode_dim] = dims
         self.n_centroids = n_centroids
