@@ -35,7 +35,8 @@ Bernoulli-based decoder module to estimate the probability of a peak being acces
 the dual clustering optimizations are introduced (iv), where a network of cluster layer, which is initialized by K-means results on the embedding, infers soft clustering label.
 The target distribution and one-hot pseudo label are sequentially calculated and used for label prediction loss and distribution alignment loss. (d) scAGDE facilitates critical
 downstream applications of clustering, visualization, imputation, enrichment analysis and discovery of regulators.
-![framework](https://github.com/Hgy1014/scAGDE/assets/64194550/79b02f20-7bde-4849-abc2-89d5bae66ce3)
+![framework](https://github.com/Hgy1014/images/blob/main/scAGDE/framework.png)
+<!-- ![framework](https://github.com/Hgy1014/scAGDE/assets/64194550/79b02f20-7bde-4849-abc2-89d5bae66ce3) -->
 
 # System Requirements
 ## Hardware requirements
@@ -77,6 +78,7 @@ pip install scAGDE
 
 # Usage
 We give users detailed usage guidelines in the folder `tutorials`. Specifically, `Tutorial 1` provides suggestions for running scAGDE in an end-to-end style and `Tutorial 2` for running scAGDE in an step-by-step way, where detailed instructions are added for each step. `Tutorial 3` and `4` provide numerous R scripts for you to complete the experimental analysis of imputation or peak selection preferences. `Tutorial 5` illustrates how scAGDE utilizes batch training on large-scale data to speed up training.
+You can also visit the online document at  <a href="https://scagde-tutorial.readthedocs.io/en/latest/index.html">https://scagde-tutorial.readthedocs.io/en/latest/index.html</a> for instruction.
 
 # Data Availability
 
