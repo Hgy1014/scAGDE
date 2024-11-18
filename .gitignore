@@ -8,6 +8,7 @@ setup.py
 data/HumanAtlas.h5ad
 data/Liver.h5ad
 data/Lung.h5ad
+data/10XBlood.h5ad
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
