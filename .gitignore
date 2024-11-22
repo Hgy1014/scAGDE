@@ -4,6 +4,8 @@ output/
 imputation/
 nb_debug/
 # file
+tutorial.py
+tutorial.ipynb
 get2fa.py
 setup.py
 data/HumanAtlas.h5ad
