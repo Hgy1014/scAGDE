@@ -65,14 +65,16 @@ We need your environment to have R and `mclust` package installed.
 # Installation Guide:
 You can create an environment to run scAGDE without any problems by following the code below:
 ```
-conda create -n scagde python=3.9.13
+conda create -n scagde python=3.9.13 -y
 conda activate scagde
 pip install torch==2.0.1
 pip install numpy==1.23.5
-pip install rpy2==3.5.13
+pip install rpy2==3.5.16
 pip install scanpy==1.9.3
 pip install matplotlib==3.5.0
-conda install r-mclust
+pip install leidenalg==0.10.2
+conda install r-base==4.3.1 -y
+conda install r-mclust -y
 pip install scAGDE
 ```
 
