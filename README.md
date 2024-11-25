@@ -68,7 +68,7 @@ You can create an environment to run scAGDE without any problems by following th
 conda create -n scagde python=3.9.13 -y
 conda activate scagde
 pip install torch==2.0.1
-pip install numpy==1.23.5
+pip install numpy==1.26.4
 pip install rpy2==3.5.16
 pip install scanpy==1.9.3
 pip install matplotlib==3.5.0
