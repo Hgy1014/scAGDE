@@ -3,7 +3,7 @@
 [![PyPI badge](https://img.shields.io/badge/pypi_package-0.0.15-blue)](https://pypi.org/project/scAGDE/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.12176520.svg)](https://zenodo.org/records/12176520)
-![logo](https://github.com/Hgy1014/scAGDE/assets/64194550/867c48cc-c777-4a08-9886-eb6fdb214cc5)
+<!-- ![logo](https://github.com/Hgy1014/scAGDE/assets/64194550/867c48cc-c777-4a08-9886-eb6fdb214cc5) -->
 
 `scAGDE` is a Python implementation for a novel single-cell chromatin accessibility model-based deep graph representation learning method that simultaneously learns feature representation and
 clustering through explicit modeling of single-cell ATAC-seq data generation.
